@@ -1,8 +1,12 @@
 {
   "name": "jstrivia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Small utility functions for JavaScript",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "scripts": {
     "test": "vitest",
     "build": "babel src -d dist"
