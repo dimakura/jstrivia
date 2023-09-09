@@ -4,8 +4,9 @@
   "description": "Small utility functions for JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "keywords": [
     "JavaScript",
