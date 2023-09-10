@@ -1,8 +1,8 @@
-import isEmpty from "./isEmpty";
+import isBlank from "./isBlank";
 import isNumber from "./isNumber";
 
 export default function parseInteger(value, defaultValue) {
-  if (isEmpty(value)) return numberOrNull(defaultValue);
+  if (isBlank(value)) return numberOrNull(defaultValue);
   if (isNumber(value)) return Math.floor(value);
 
   const parsed = parseInt(value, 10);

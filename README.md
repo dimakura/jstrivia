@@ -1,12 +1,19 @@
 # jstrivia
 
-## isEmpty(value)
+## isBlank(value)
 
 ```js
-isEmpty(); // true
-isEmpty(null); // true
-isEmpty(""); // true
-isEmpty(1 / 0); // true
+isBlank(); // true
+isBlank(null); // true
+isBlank(""); // true
+isBlank(1 / 0); // true
+```
+
+## isFunction(value)
+
+```js
+isFunction("Tony"); // false
+isFunction(function () {}); // true
 ```
 
 ## isNumber(value)
@@ -24,7 +31,22 @@ isNumber(1.1); // true
 
 ## isPresent(value)
 
-Exact opposite of `isEmpty`.
+Exact opposite of `isBlank`.
+
+## length(value)
+
+```js
+length(null); // undefined
+length("James"); // 5
+length([1, 2, 3]); // 3
+```
+
+## merge(...objects)
+
+```js
+merge([1, 2, 3], [4, 5, [6, 7]]); // [1, 2, 3, 4, 5, 6, 7]
+merge([1, 2], null, undefined); // [1, 2]
+```
 
 ## parseInteger(value, defaultValue)
 
@@ -36,4 +58,26 @@ parseInteger(""); // null
 parseInteger("1"); // 1
 parseInteger("1.1"); // 1
 parseInteger("a", 2); // 2
+```
+
+## validateEmail(email)
+
+```js
+validateEmail("test@example"); // ["invalid email"]
+validateEmail("test@example.com"); // null
+```
+
+## validateLength(value, min, max)
+
+```js
+validateLength("test", 2, 4); // null
+validateLength("test", 2, 3); // ["must be at most 3 characters"]
+```
+
+## validatePresence(value)
+
+```js
+validatePresence(); // ["must be present"]
+validatePresence(null); // ["must be present"]
+validatePresence("Jones"); // null
 ```

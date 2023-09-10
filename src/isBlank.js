@@ -1,4 +1,4 @@
-export default function isEmpty(value) {
+export default function isBlank(value) {
   if (value == null) return true;
 
   if (typeof value === "undefined") return true;

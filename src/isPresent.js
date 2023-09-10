@@ -1,5 +1,5 @@
-import isEmpty from "./isEmpty";
+import isBlank from "./isBlank";
 
 export default function isPresent(value) {
-  return !isEmpty(value);
+  return !isBlank(value);
 }
