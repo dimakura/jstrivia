@@ -48,6 +48,17 @@ merge([1, 2, 3], [4, 5, [6, 7]]); // [1, 2, 3, 4, 5, 6, 7]
 merge([1, 2], null, undefined); // [1, 2]
 ```
 
+## parseFloat(value, defaultValue)
+
+```js
+parseFloat(); // null
+parseFloat(null); // null
+parseFloat(null, 2); // 2
+parseFloat(""); // null
+parseFloat("1.1"); // 1.1
+parseFloat("a", 2); // 2
+```
+
 ## parseInteger(value, defaultValue)
 
 ```js
