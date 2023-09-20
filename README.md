@@ -48,6 +48,12 @@ merge([1, 2, 3], [4, 5, [6, 7]]); // [1, 2, 3, 4, 5, 6, 7]
 merge([1, 2], null, undefined); // [1, 2]
 ```
 
+## parentFolder(path)
+
+```js
+parentFolder("/home/tony"); // "/home"
+```
+
 ## parseFloat(value, defaultValue)
 
 ```js

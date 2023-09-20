@@ -4,6 +4,7 @@ export * from "./isNumber";
 export * from "./isPresent";
 export * from "./length";
 export * from "./merge";
+export * from "./parentFolder";
 export * from "./parseFloat";
 export * from "./parseInteger";
 export * from "./validateEmail";
