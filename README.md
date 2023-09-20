@@ -78,6 +78,13 @@ parseInteger("1.1"); // 1
 parseInteger("a", 2); // 2
 ```
 
+## presence(value, defaultValue)
+
+```js
+presence(0, 1); // 0
+presence(null, 1); // 1
+```
+
 ## validateEmail(email)
 
 ```js
