@@ -52,6 +52,7 @@ merge([1, 2], null, undefined); // [1, 2]
 
 ```js
 parentFolder("/home/tony"); // "/home"
+parentFolder("C:\\Users\\tony"); // "C:\\Users"
 ```
 
 ## parseFloat(value, defaultValue)
