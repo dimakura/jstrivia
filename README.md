@@ -1,5 +1,11 @@
 # jstrivia
 
+## delayInSeconds(seconds)
+
+```js
+await delayInSeconds(1); // wait 1 second
+```
+
 ## isBlank(value)
 
 ```js
@@ -83,6 +89,34 @@ parseInteger("a", 2); // 2
 ```js
 presence(0, 1); // 0
 presence(null, 1); // 1
+```
+
+## retry(fn, options)
+
+```js
+// given a risky function
+const riskyFunction = () => { ... };
+
+// we can produce a new function which automatically
+// retries the risky function on failure
+
+// retry 5 times with 1, 2, 4, 8, 16 seconds delay
+const riskyWithRetry = retry(riskyFunction);
+
+// retry 3 times with 1 second delay
+// (the leading 0 is required, and can be used for initial delay)
+const riskyWithRetry = retry(
+  riskyFunction, {
+    backoffs: [0, 1, 1, 1]
+  }
+);
+
+// retry only on a specific error
+const riskyWithRetry = retry(
+  riskyFunction, {
+    canRetry: (error, attempt) => error instanceof LimitExceededException
+  }
+);
 ```
 
 ## validateEmail(email)
