@@ -1,6 +1,6 @@
 {
   "name": "jstrivia",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Small utility functions for JavaScript",
   "main": "index.js",
   "repository": {
@@ -24,5 +24,8 @@
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
     "vitest": "^0.34.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
