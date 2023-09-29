@@ -3,7 +3,7 @@ import isNumber from "./isNumber";
 
 export default function parseFloat(
   value: string,
-  defaultValue: number
+  defaultValue?: number
 ): number | null {
   if (isBlank(value)) return numberOrNull(defaultValue);
   if (isNumber(value)) return value;
@@ -15,7 +15,7 @@ export default function parseFloat(
   return parsed;
 }
 
-function numberOrNull(value: number) {
+function numberOrNull(value: any) {
   if (isNumber(value)) return value;
 
   return null;

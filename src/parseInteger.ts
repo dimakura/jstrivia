@@ -1,7 +1,7 @@
 import isBlank from "./isBlank";
 import isNumber from "./isNumber";
 
-export default function parseInteger(value: any, defaultValue: number) {
+export default function parseInteger(value: any, defaultValue?: number) {
   if (isBlank(value)) return numberOrNull(defaultValue);
   if (isNumber(value)) return Math.floor(value);
 
