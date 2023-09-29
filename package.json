@@ -1,6 +1,6 @@
 {
   "name": "jstrivia",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Small utility functions for JavaScript",
   "main": "index.js",
   "repository": {

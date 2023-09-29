@@ -1,10 +1,11 @@
 import isBlank from "./isBlank";
 import isNumber from "./isNumber";
 
-export default function parseFloat(
-  value: string,
-  defaultValue?: number
-): number | null {
+function parseFloat(value: any): number | null;
+
+function parseFloat(value: any, defaultValue: number): number;
+
+function parseFloat(value: any, defaultValue?: number): number | null {
   if (isBlank(value)) return numberOrNull(defaultValue);
   if (isNumber(value)) return value;
 
@@ -14,6 +15,8 @@ export default function parseFloat(
 
   return parsed;
 }
+
+export default parseFloat;
 
 function numberOrNull(value: any) {
   if (isNumber(value)) return value;
