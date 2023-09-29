@@ -1,6 +1,6 @@
 import path from "path";
 
-export default function parentFolder(dir, sep = path.sep) {
+export default function parentFolder(dir: string, sep: string = path.sep) {
   const parts = dir.split(sep);
 
   const res = parts.pop();

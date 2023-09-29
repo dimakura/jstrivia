@@ -4,12 +4,12 @@ rm -rf dist/
 
 npm run build
 
-cp package.json dist/
+# cp package.json dist/
 
-cp README.md dist/
+# cp README.md dist/
 
-cp LICENSE dist/
+# cp LICENSE dist/
 
-cd dist/
+# cd dist/
 
-npm publish
+# npm publish

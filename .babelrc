@@ -1,4 +1,0 @@
-{
-  "presets": ["@babel/preset-env"],
-  "ignore": ["src/**/*.test.js"]
-}

@@ -1,7 +1,7 @@
 import isBlank from "./isBlank";
 import isFunction from "./isFunction";
 
-export default function length(val) {
+export default function length(val: any): number | undefined {
   let len;
 
   if (val === null || typeof val === "undefined") return;

@@ -8,7 +8,7 @@
     "url": "https://github.com/dimakura/jstrivia"
   },
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -23,6 +23,9 @@
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
+    "ts-node": "^10.9.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
     "vitest": "^0.34.4"
   },
   "publishConfig": {

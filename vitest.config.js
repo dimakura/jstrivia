@@ -9,7 +9,7 @@ export default defineConfig({
     globals: false,
     environment: "node",
     setupFiles: [],
-    include: ["./src/**/*.test.js"],
+    include: ["./src/**/*.test.[jt]s"],
     watchExclude: [".*\\/node_modules\\/.*", ".*\\/dist\\/.*"],
   },
 });

@@ -1,10 +1,17 @@
 import delayInSeconds from "./delayInSeconds";
 
-const anyRetry = (_error, _attempt) => true;
+type CanRetryFn = (error: any, attempt: number) => boolean;
+
+type RetryOpts = {
+  backoffs?: number[];
+  canRetry?: CanRetryFn;
+};
+
+const anyRetry: CanRetryFn = (_error, _attempt) => true;
 
 const defaultBackoffs = [0, 1, 2, 4, 8, 16];
 
-export default function retry(fn, opts = {}) {
+export default function retry(fn: Function, opts?: RetryOpts) {
   const { backoffs = defaultBackoffs, canRetry = anyRetry } = opts || {};
 
   return async function () {
