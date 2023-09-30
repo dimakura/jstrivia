@@ -119,6 +119,14 @@ const riskyWithRetry = retry(
 );
 ```
 
+## squish(text, options)
+
+```js
+squish("  hello  world  "); // "hello world"
+squish("  hello \n world  "); // "hello\nworld"
+squish("  hello \n world  ", { onOneLine: true }); // "hello world"
+```
+
 ## validateEmail(email)
 
 ```js

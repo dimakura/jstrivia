@@ -1,4 +1,3 @@
-import isBlank from "./isBlank";
 import isFunction from "./isFunction";
 
 export default function length(val: any): number | undefined {
