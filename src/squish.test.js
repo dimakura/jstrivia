@@ -6,4 +6,5 @@ test("squish", () => {
   expect(squish("  foo  bar ")).toBe("foo bar");
   expect(squish("  foo \n bar  ")).toBe("foo\nbar");
   expect(squish("  foo \n bar  ", { onOneLine: true })).toBe("foo bar");
+  expect(squish("  foo\nbar\n")).toBe("foo\nbar");
 });

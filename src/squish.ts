@@ -7,7 +7,7 @@ type SquishOptions = {
 export default function squish(text: string, options: SquishOptions = {}) {
   const joiner = options.onOneLine ? " " : "\n";
 
-  return text.split("\n").map(squishLine).join(joiner);
+  return text.split("\n").map(squishLine).filter(isPresent).join(joiner);
 }
 
 function squishLine(text: string) {
