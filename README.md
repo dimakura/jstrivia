@@ -148,3 +148,10 @@ validatePresence(); // ["must be present"]
 validatePresence(null); // ["must be present"]
 validatePresence("Jones"); // null
 ```
+
+## validateRegex(value, regex)
+
+```js
+validateRegex("test", /^[a-z]+$/); // null
+validateRegex("test123", /^[a-z]+$/); // ["is invalid"]
+```
